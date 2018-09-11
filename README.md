@@ -2,9 +2,13 @@ This small addon shows the window of the audio DSP. You can comfortably change t
 
 The DSP window is only showing while a movie or a video clip is running.
 
-Simply connect the addon with a button on your remote or keyboard. To do this, create an adsp.xml in 
+Simply connect the addon with a button on your remote or keyboard. To do this, create an ```adsp.xml``` in (Linux) 
 
-    $USER/.kodi/userdata/keymaps/ 
+    $USER/.kodi/userdata/keymaps/
+
+or LE/CE
+
+    /storage/.kodi/userdata/keymaps/
 
 with this content (replace ```<myremotekey>``` with a proper code):
 
