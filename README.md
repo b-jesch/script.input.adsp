@@ -1,4 +1,4 @@
-This small addons shows the window of the audio DSP. You can comfortably change the DSP compression value with a click on your remote or keyboard without navigating through various menues.
+This small addon shows the window of the audio DSP. You can comfortably change the DSP compression value with a click on your remote or keyboard without navigating through various menues.
 
 The DSP window is only showing while a movie or a video clip is running.
 
