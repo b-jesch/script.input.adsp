@@ -15,10 +15,10 @@ with this content (replace ```<myremotekey>``` with a proper code):
     <keymap>
         <global>
             <keyboard>
-                <f11>XBMC.RunScript(script.input.adsp)</f11>
+                <f11>RunScript(script.input.adsp)</f11>
             </keyboard>
             <remote>
-                <myremotekey>XBMC.RunScript(script.input.adsp)</myremotekey>
+                <myremotekey>RunScript(script.input.adsp)</myremotekey>
             </remote>
         </global>
     </keymap>
