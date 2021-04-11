@@ -1,6 +1,7 @@
 import json
 import xbmc
 import xbmcaddon
+import xbmcgui
 
 ADDON = xbmcaddon.Addon()
 ADDON_ID = ADDON.getAddonInfo('id')
@@ -28,7 +29,14 @@ def jsonrpc(query):
 
 if __name__ == '__main__':
     query = dict()
-    query.update({'method': 'Input.ExecuteAction', 'params': {'action': 'volumeamplification'}})
+    query.update({'method':'Player.GetActivePlayers', 'params': {}})
     res = jsonrpc(query)
-    if res == 'OK':
-        writeLog('Command sent successfully')
+    if len(res) > 0:
+        query.clear()
+        query.update({'method': 'Input.ExecuteAction', 'params': {'action': 'volumeamplification'}})
+        res = jsonrpc(query)
+        if res == 'OK':
+            writeLog('Command sent successfully')
+    else:
+        xbmcgui.Dialog().notification(ADDON_NAME, 'ADSP is only available if media is playing',
+                                      icon=xbmcgui.NOTIFICATION_INFO)
